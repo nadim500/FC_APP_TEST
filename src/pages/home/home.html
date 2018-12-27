@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Lista de Productos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let product of products; let i = index;" (click)="removeProduct(i)">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.state ? 'ACTIVO' : 'INACTIVO' }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
